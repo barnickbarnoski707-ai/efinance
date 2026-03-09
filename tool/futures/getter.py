@@ -3,11 +3,11 @@ from typing import List, Union
 
 import pandas as pd
 
-from ..common import get_deal_detail as get_deal_detail_for_futures
-from ..common import get_quote_history as get_quote_history_for_futures
-from ..common import get_realtime_quotes_by_fs
+from ..common.getter import get_deal_detail as get_deal_detail_for_futures
+from ..common.getter import get_quote_history as get_quote_history_for_futures
+from ..common.getter import get_realtime_quotes_by_fs
 from ..common.config import FS_DICT
-from ..utils import process_dataframe_and_series
+from ..utils.core import process_dataframe_and_series
 
 
 def get_futures_base_info() -> pd.DataFrame:

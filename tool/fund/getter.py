@@ -15,10 +15,10 @@ from retry import retry
 from tqdm.auto import tqdm
 import time
 
-from ..utils import to_numeric
+from ..utils.core import to_numeric
 from .config import EastmoneyFundHeaders
 from ..common.config import MagicConfig
-from ..shared import session, MAX_CONNECTIONS
+from ..shared.session_manager import session, MAX_CONNECTIONS
 import warnings
 
 warnings.filterwarnings("module")

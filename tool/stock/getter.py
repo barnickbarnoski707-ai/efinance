@@ -17,16 +17,16 @@ from jsonpath import jsonpath
 from retry import retry
 from tqdm.auto import tqdm
 
-from ..common import get_base_info as get_base_info_for_stock
-from ..common import get_deal_detail as get_deal_detail_for_stock
-from ..common import get_history_bill as get_history_bill_for_stock
-from ..common import get_quote_history as get_quote_history_for_stock
-from ..common import get_realtime_quotes_by_fs
-from ..common import get_today_bill as get_today_bill_for_stock
+from ..common.getter import get_base_info as get_base_info_for_stock
+from ..common.getter import get_deal_detail as get_deal_detail_for_stock
+from ..common.getter import get_history_bill as get_history_bill_for_stock
+from ..common.getter import get_quote_history as get_quote_history_for_stock
+from ..common.getter import get_realtime_quotes_by_fs
+from ..common.getter import get_today_bill as get_today_bill_for_stock
 from ..common.config import EASTMONEY_REQUEST_HEADERS, FS_DICT, MagicConfig, MarketType
 from ..common.getter import get_latest_quote as get_latest_quote_for_stock
-from ..shared import session
-from ..utils import (
+from ..shared.session_manager import session
+from ..utils.core import (
     get_quote_id,
     process_dataframe_and_series,
     search_quote,

@@ -1,10 +1,10 @@
 # 该文件是项目的统一入口，代理了 tool 包下的各个子模块，供外部调用
 # 您可以通过导入此文件来使用股票、基金、债券、期货等行情获取功能
 
-from tool import stock
-from tool import fund
-from tool import bond
-from tool import futures
+from tool.stock import getter as stock
+from tool.fund import getter as fund
+from tool.bond import getter as bond
+from tool.futures import getter as futures
 
 __all__ = ['stock', 'fund', 'bond', 'futures']
 
@@ -15,11 +15,13 @@ if __name__ == "__main__":
         quote = stock.get_realtime_quotes()
         print(quote.head())
     except Exception as e:
-        print(f"调用股票模块时发生错误: {e}")
+        import traceback
+        traceback.print_exc()
 
     print("\n=== 测试调用基金模块: 获取某基金的实时估值 ===")
     try:
         fund_quote = fund.get_realtime_increase_rate('161725')
         print(fund_quote)
     except Exception as e:
-        print(f"调用基金模块时发生错误: {e}")
+        import traceback
+        traceback.print_exc()

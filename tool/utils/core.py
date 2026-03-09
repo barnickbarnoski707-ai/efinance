@@ -11,8 +11,8 @@ import rich
 from retry.api import retry
 
 from ..common.config import FS_DICT, MARKET_NUMBER_DICT, MagicConfig, MarketType
-from ..config import SEARCH_RESULT_CACHE_PATH
-from ..shared import SEARCH_RESULT_DICT, session
+from ..config.settings import SEARCH_RESULT_CACHE_PATH
+from ..shared.session_manager import SEARCH_RESULT_DICT, session
 
 # 函数变量
 F = TypeVar("F")

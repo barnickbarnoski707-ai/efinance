@@ -6,7 +6,7 @@ from typing import Dict
 import pandas as pd
 import requests
 
-from ..config import SEARCH_RESULT_CACHE_PATH, MAX_CONNECTIONS
+from ..config.settings import SEARCH_RESULT_CACHE_PATH, MAX_CONNECTIONS
 
 
 class CustomedSession(requests.Session):

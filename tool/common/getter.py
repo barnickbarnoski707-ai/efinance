@@ -11,8 +11,8 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 
 from ..common.config import MARKET_NUMBER_DICT, MarketType
-from ..shared import BASE_INFO_CACHE, session, MAX_CONNECTIONS
-from ..utils import get_quote_id, to_numeric
+from ..shared.session_manager import BASE_INFO_CACHE, session, MAX_CONNECTIONS
+from ..utils.core import get_quote_id, to_numeric
 from .config import (
     EASTMONEY_BASE_INFO_FIELDS,
     EASTMONEY_HISTORY_BILL_FIELDS,
